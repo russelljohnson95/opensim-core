@@ -209,8 +209,8 @@ end
 % is in front, and one that constrains the distance between fee when the left 
 % foot is in front. 
 %
-% The Right Step Length (RSL) is the distance between feet at right foot strike
-% The Left Step Length (LSL) is the distance between feet at left foot strike
+% The Right Step Length (RSL) is the distance between feet at right foot-strike
+% The Left Step Length (LSL) is the distance between feet at left foot-strike
 % Step Length Asymmetry = (RSL - LSL)/ (RSL + LSL) 
 %
 % Asymmetry values ranges from -1.0 to 1.0. For example, 0.20 is 20% positive 
@@ -230,9 +230,10 @@ end
 % Because this goal doesn't directly compute the step length
 % asymmetry from heel strike data, users should confirm that the step
 % length asymmetry from the solution matches closely to their target.
+% To do this, we provide the helper function computeStepAsymmetryValues() below.
 % Additionally, in some cases users may want to set target asymmetries
-% above or below the desired value, in the event there is some offset. To do 
-% this, we provide the helper function computeStepAsymmetryValues() below.
+% above or below the desired value, in the event there is some offset.
+
 function stepLengthAsymmetry()
 
 import org.opensim.modeling.*;
