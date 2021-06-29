@@ -44,7 +44,7 @@ void MocoStepLengthAsymmetryGoal::initializeOnModelImpl(const Model& model) cons
     checkPropertyValueIsPositive(getProperty_asymmetry_smoothing());
     checkPropertyValueIsPositive(getProperty_stride_length());
 
-    // Compute target foot positions based on properties.
+    // Compute target foot distance limits based on properties.
     m_right_foot_threshold =
             0.5 * (1 + get_target_asymmetry()) * get_stride_length();
     m_left_foot_threshold =
